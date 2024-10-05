@@ -1,0 +1,37 @@
+@startuml
+
+title UML-діаграма розгортання ПП
+
+left to right direction
+
+skinparam componentStyle uml1
+
+node "<<Mobile phone>>" as dk {
+    node "<<Android/iOS>>" {
+        node "<<Mobile application>>" {
+            component [*.apk]
+        }
+    }
+}
+
+interface sensor as se
+
+interface microphone as mc
+
+interface camera as cm 
+
+se -- dk
+mc -- dk
+cm -- dk
+
+dk -- GoogleCloudPlatform
+
+node "<<Google cloud platform>>" as GoogleCloudPlatform {
+	node "<<Firebase>>" as l2 {
+	    node "<<Firestore database>>" {
+		    database documents
+		}
+	}
+}
+
+@enduml
