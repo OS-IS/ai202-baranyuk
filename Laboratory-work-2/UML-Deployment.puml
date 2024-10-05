@@ -24,9 +24,18 @@ se -- dk
 mc -- dk
 cm -- dk
 
-dk -- GoogleCloudPlatform
+dk -- serv1
+serv1 -- G
 
-node "<<Google cloud platform>>" as GoogleCloudPlatform {
+node "<<Server 1>>" as serv1 {
+	node "<<Windows>>" as l2 {
+	    node "<<Aplication server>>" {
+		    component [*.jar]
+		}
+	}
+}
+
+node "<<Google cloud platform>>" as G{
 	node "<<Firebase>>" as l2 {
 	    node "<<Firestore database>>" {
 		    database documents
@@ -35,3 +44,4 @@ node "<<Google cloud platform>>" as GoogleCloudPlatform {
 }
 
 @enduml
+
