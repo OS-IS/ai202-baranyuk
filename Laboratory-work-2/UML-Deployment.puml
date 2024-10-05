@@ -28,7 +28,7 @@ camera -- dk
 
 node "<<Server 1>>" as serv1 {
 	node "<<Operating System Windows>>" as l1 {
-	    node "<<Application Server Dart>>" {
+	    node "<<Flutter Application Server>>" {
 		    component [*.dart]
 		}
 	}
