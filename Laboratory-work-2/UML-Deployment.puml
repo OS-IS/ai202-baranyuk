@@ -7,41 +7,43 @@ left to right direction
 skinparam componentStyle uml1
 
 node "<<Mobile phone>>" as dk {
-    node "<<Android/iOS>>" {
-        node "<<Mobile application>>" {
+    node "<<Operating System Android/iOS>>" {
+        node "<<Mobile Application>>" {
             component [*.apk]
         }
     }
 }
 
-interface sensor as se
+interface sensor
 
-interface microphone as mc
+interface microphone
 
-interface camera as cm 
+interface camera
 
-se -- dk
-mc -- dk
-cm -- dk
+sensor -- dk
 
-dk -- serv1
-serv1 -- G
+microphone -- dk
+
+camera -- dk
 
 node "<<Server 1>>" as serv1 {
-	node "<<Windows>>" as l2 {
-	    node "<<Aplication server>>" {
-		    component [*.jar]
+	node "<<Operating System Windows>>" as l1 {
+	    node "<<Application Server Dart>>" {
+		    component [*.dart]
 		}
 	}
 }
 
-node "<<Google cloud platform>>" as G{
+dk -- serv1
+
+node "<<Google cloud platform>>" as serv2 {
 	node "<<Firebase>>" as l2 {
-	    node "<<Firestore database>>" {
+	    node "<<Firestore>>" {
 		    database documents
 		}
 	}
 }
 
-@enduml
+serv1 -- serv2
 
+@enduml
