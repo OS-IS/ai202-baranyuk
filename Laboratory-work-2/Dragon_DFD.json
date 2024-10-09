@@ -1,0 +1,537 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Dragon_DFD",
+    "owner": "",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Sunny_childhood",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 340,
+              "y": -399.9999999999991
+            },
+            "size": {
+              "width": 540,
+              "height": 270
+            },
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "a1ec639c-c9e8-4c93-94ea-ba63dc9b2888",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 90,
+              "y": -290
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Mobile App"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "id": "451d551e-7801-4930-aab2-f7a096ff77b7",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Mobile App",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Spoofing of the Mobile Client External Destination Entity",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Mobile Client may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Mobile Client. Consider using a standard authentication mechanism to identify the external entity.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "External Entity Mobile Client Potentially Denies Receiving Data",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Mobile Client claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 390,
+              "y": -300
+            },
+            "size": {
+              "width": 110,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Flutter App \nService \nMobile App"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "id": "60f91e00-af94-4472-a837-4ca34df7229e",
+            "data": {
+              "type": "tm.Process",
+              "name": "Flutter App \nService \nMobile App",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Elevation Using Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Flutter App Service Mobile App may be able to impersonate the context of Mobile Client in order to gain additional privilege.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Spoofing of Destination Data Store Firebase firestore",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Firebase firestore may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Firebase firestore. Consider using a standard authentication mechanism to identify the destination data store.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Flutter App Service Mobile App May be Subject to Elevation of Privilege Using Remote Code Execution",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Mobile Client may be able to remotely execute code for Flutter App Service Mobile App.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Potential Data Repudiation by Flutter App Service Mobile App",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Flutter App Service Mobile App claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 2
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 729,
+              "y": -290
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Firebase firestore"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "id": "07386cb6-ed52-4e23-a718-24d4d9b2c93b",
+            "data": {
+              "type": "tm.Store",
+              "name": "Firebase firestore",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "40c75bbb-eb38-4df4-bf08-568137061bee",
+                  "title": "Potential Lack of Input Validation for Flutter App Service Mobile App",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data flowing across Mobile-client-App-Service-Request may be tampered with by an attacker. This may lead to a denial of service attack against Flutter App Service Mobile App or an elevation of privilege attack against Flutter App Service Mobile App or an information disclosure by Flutter App Service Mobile App. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Mobile-Client-App-Service-Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "\tData Flow Sniffing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data flowing across Mobile-client-App-Service-Request may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "id": "77aa8743-ddf0-428c-a60e-0d8350659f12",
+            "labels": [
+              "Mobile-Client-App-Service-Request"
+            ],
+            "source": {
+              "cell": "451d551e-7801-4930-aab2-f7a096ff77b7"
+            },
+            "target": {
+              "cell": "60f91e00-af94-4472-a837-4ca34df7229e"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": -300
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS R",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Potential Excessive Resource Consumption for Flutter App Service Mobile App or Firebase firestore",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Does Flutter App Service Mobile App or Firebase firestore take explicit steps to control resource consumption? Resource consumption attacks can be hard to deal with, and there are times that it makes sense to let the OS do the job. Be careful that your resource requests don't deadlock, and that they do timeout.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "id": "62801b81-880f-4697-b9d4-f0530859acdb",
+            "labels": [
+              "HTTPS "
+            ],
+            "source": {
+              "cell": "60f91e00-af94-4472-a837-4ca34df7229e"
+            },
+            "target": {
+              "cell": "07386cb6-ed52-4e23-a718-24d4d9b2c93b"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": -300
+              },
+              {
+                "x": 660,
+                "y": -300
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Mobile-Client-App-Service-Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "97198c0b-6385-48e1-9130-01cee60b9bc5",
+                  "title": "Data Flow Mobile-client-App-Service-Response Is Potentially Interrupted",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An external agent interrupts data flowing across a trust boundary in either direction.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "id": "fd5c3a78-e193-41b6-b84f-a4ff1657b93c",
+            "labels": [
+              "Mobile-Client-App-Service-Response"
+            ],
+            "source": {
+              "cell": "60f91e00-af94-4472-a837-4ca34df7229e"
+            },
+            "target": {
+              "cell": "451d551e-7801-4930-aab2-f7a096ff77b7"
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": -220
+              },
+              {
+                "x": 300,
+                "y": -180
+              },
+              {
+                "x": 230,
+                "y": -200
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "9c5e0602-c4b7-4bff-8132-7663a2ec0637",
+            "labels": [
+              "HTTPS"
+            ],
+            "source": {
+              "cell": "07386cb6-ed52-4e23-a718-24d4d9b2c93b"
+            },
+            "target": {
+              "cell": "60f91e00-af94-4472-a837-4ca34df7229e"
+            },
+            "vertices": [
+              {
+                "x": 610,
+                "y": -200
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 13
+  }
+}
