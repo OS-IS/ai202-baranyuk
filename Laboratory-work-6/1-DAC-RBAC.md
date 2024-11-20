@@ -92,9 +92,12 @@
 
 21. Встановіть повноваження на внесення даних до таблиці для ролі.
 
-![image](https://github.com/user-attachments/assets/d9d4082c-1869-44f9-ab91-7825e41a54a6)
+![image](https://github.com/user-attachments/assets/304f46f3-eb7c-4005-858d-c95c0897f7af)
+
 
 
 22. Повторіть крок 20.
 
-![image](https://github.com/user-attachments/assets/bb7e85d7-d0b5-4745-a525-437a68c548cb)
+![image](https://github.com/user-attachments/assets/45518b72-df5f-4faf-82c9-4e308df49f17)
+
+
